@@ -7,17 +7,29 @@ import Image from 'next/image';
 import { Button, Dropdown, Label, Spinner } from '@heroui/react';
 import NavLink from './Navlink';
 import {BarsUnaligned} from '@gravity-ui/icons';
-const Navbar =  () =>  {
+import {Icon} from "@iconify/react";
 
+
+const Navbar =  ({variant = "dark"}) =>  {
+
+  const style = {
+    light: {
+      logo: 'text-white'
+    },
+    dark: {
+      logo: 'text-[#c3923c]'
+    }
+  }
   
+   const s = style[variant];
   // const { data: session, isPending } =  authClient.useSession();
   // const user = session?.user;
   // console.log(user, 'user')
 
-  const isLoggedIn = true;
+  const isLoggedIn = false;
   return (
     <>
-     <div className='flex justify-between items-center w-10/12 mx-auto mt-16 rounded-full p-4 glass sticky top-10 z-50'>
+     <div className='flex justify-between items-center w-10/12 mx-auto mt-16 rounded-full p-2 glass sticky top-10 z-50 backdrop-blur-md'>
    <div className='flex gap-2 items-center'>
      
 
@@ -30,7 +42,7 @@ const Navbar =  () =>  {
     className='w-10 h-10'
     >
     </Image>
-    <h1 className='font-black text-sm md:text-2xl text-white'>QurbaniHat</h1>
+    <h1 className={`font-black text-sm md:text-2xl ${s.logo} hidden md:block`}>QurbaniHat</h1>
    </div>
    <div>
      <ul className=' gap-4 hidden md:flex'>
@@ -85,10 +97,21 @@ const Navbar =  () =>  {
       bg-[#c3923c] font-bold 
       text-[10px] px-2 py-1 
       sm:text-sm sm:px-3 sm:py-1.5 
-      rounded-l-sm
+      rounded-sm
     '
   >
     <Link href={'/login'}>Login</Link>
+   
+  </Button>
+   <Button
+    className='
+      bg-[#c3923c] font-bold 
+      text-[10px] px-2 py-1 
+      sm:text-sm sm:px-3 sm:py-1.5 
+      rounded-l-sm
+    '
+  > 
+    <Link href={'/login'}> <Icon icon="devicon:google" /></Link>
    
   </Button>
   </>
@@ -117,7 +140,7 @@ const Navbar =  () =>  {
    
     </div>
 
- <div className='flex items-center justify-center w-11/12 mx-auto mt-2 rounded-full p-4 glass sticky top-0 z-50 md:hidden'>
+ <div className='flex items-center justify-center w-10/12 mx-auto mt-2 rounded-full p-3 glass sticky top-28 z-50 md:hidden backdrop-blur-md'>
   <ul className='flex gap-4 items-center'>
     <li><NavLink href={'/'}>Home</NavLink></li>
     <li><NavLink href={'/animals'}>Animals</NavLink></li>

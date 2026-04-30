@@ -6,12 +6,15 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "db": "json-server --watch localdb.json --port 5000"
   },
   "dependencies": {
     "@gravity-ui/uikit": "^7.38.0",
     "@heroui/react": "^3.0.3",
     "@heroui/styles": "^3.0.3",
+    "@iconify/react": "^6.0.2",
+    "json-server": "^1.0.0-beta.15",
     "next": "16.2.4",
     "react": "19.2.4",
     "react-dom": "19.2.4"
@@ -19,6 +22,7 @@
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
     "babel-plugin-react-compiler": "1.0.0",
+    "daisyui": "^5.5.19",
     "eslint": "^9",
     "eslint-config-next": "16.2.4",
     "tailwindcss": "^4"

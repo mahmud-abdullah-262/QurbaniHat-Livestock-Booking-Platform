@@ -1,6 +1,7 @@
 import { Geist, Geist_Mono, Montserrat } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/shered/Navbar";
+import Footer from "@/components/shered/Footer";
 
 export const montserrat = Montserrat({
   variable: '--font-montserrat',
@@ -21,9 +22,9 @@ export default function RootLayout({ children }) {
     >
 
      <body className={`${montserrat.className} min-h-full flex flex-col  glass-bg`}>
-        <Navbar></Navbar>
-        {children}
         
+        {children}
+        <Footer></Footer>
         </body>
     </html>
   );

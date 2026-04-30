@@ -1,0 +1,149 @@
+{"animals" :[
+  {
+    "id": 1,
+    "name": "Deshi Shahi Cow",
+    "type": "Cow",
+    "breed": "Local Deshi",
+    "price": 125000,
+    "weight": 290,
+    "age": 3,
+    "location": "Bogura",
+    "description": "This Deshi Shahi cow is a healthy and naturally raised animal, ideal for Qurbani or meat production. It has been fed with organic grass, grains, and clean পানি sources, ensuring high-quality beef. The cow has a strong immune system and no history of disease. Its শরীর structure is well balanced with good fat distribution, making it suitable for buyers seeking both quality and value. Regular veterinary checkups have been maintained. This cow is calm in behavior, easy to manage, and perfect for traditional farming or religious purposes.",
+    "image": [
+      "https://i.ibb.co.com/7d4D9n0p/cow1a.jpg",
+      "https://i.ibb.co.com/Z6f1Q7SN/cow1d.jpg",
+      "https://i.ibb.co.com/gZ5rmQ07/cow1c.jpg",
+      "https://i.ibb.co.com/Z6f1Q7SN/cow1d.jpg"
+    ],
+    "category": "Large Animal"
+  },
+  {
+    "id": 2,
+    "name": "Sahiwal Cow Premium",
+    "type": "Cow",
+    "breed": "Sahiwal",
+    "price": 185000,
+    "weight": 360,
+    "age": 4,
+    "location": "Rajshahi",
+    "description": "This Sahiwal cow is a premium breed known for its excellent meat quality and adaptability to local climates. It has been raised in a clean farm environment with balanced nutrition including grains and green fodder. The cow has a solid muscular build and a healthy digestive system. नियमित monitoring ensures it remains disease free. It is ideal for Qurbani as well as breeding purposes. Its শান্ত temperament makes it easy to handle, even for beginners. Overall, it offers a combination of productivity, স্বাস্থ্য, and long-term value for livestock buyers.",
+    "image": [
+      "https://i.ibb.co.com/Y7n9RBxj/cow2a.jpg",
+      "https://i.ibb.co.com/9Mkhzcv/cow2b.jpg",
+      "https://i.ibb.co.com/4R85smMN/cow2c.jpg",
+      "https://i.ibb.co.com/yBB7YP31/cow2d.jpg"
+    ],
+    "category": "Large Animal"
+  },
+  {
+    "id": 3,
+    "name": "Black Bengal Goat",
+    "type": "Goat",
+    "breed": "Black Bengal",
+    "price": 28000,
+    "weight": 36,
+    "age": 2,
+    "location": "Kushtia",
+    "description": "This Black Bengal goat is one of the most popular breeds in Bangladesh due to its superior meat quality and high demand. It is raised in a natural grazing environment with minimal artificial feed. The goat is active, healthy, and free from common livestock diseases. Its compact body ensures excellent meat texture and taste. Regular deworming and proper care have been maintained. It is suitable for Qurbani as well as small-scale farming. Buyers looking for reliable and লাভজনক livestock will find this goat to be a valuable addition.",
+    "image": [
+      "https://i.ibb.co.com/5gR1vKv5/goat1a.png",
+      "https://i.ibb.co.com/1JjnNxv6/goat1b.png",
+      "https://i.ibb.co.com/rR1xGtL0/goat1c.png",
+      "https://i.ibb.co.com/7dtvwgZj/goat1d.png"
+    ],
+    "category": "Small Animal"
+  },
+  {
+    "id": 4,
+    "name": "Jamunapari Goat",
+    "type": "Goat",
+    "breed": "Jamunapari",
+    "price": 42000,
+    "weight": 52,
+    "age": 3,
+    "location": "Pabna",
+    "description": "The Jamunapari goat is a large and attractive breed known for both meat and milk production. This particular goat has been raised in a hygienic farm setting with a balanced diet including green fodder and supplements. It has a tall body structure, strong legs, and excellent health condition. Regular vaccinations and veterinary supervision ensure it remains fit and disease free. This breed is ideal for farmers aiming for dual-purpose benefits. Its gentle nature makes handling easy, while its size and productivity make it highly desirable in the market.",
+    "image": [
+      "https://i.ibb.co.com/Y7n9RBxj/cow2a.jpg",
+      "https://i.ibb.co.com/9Mkhzcv/cow2b.jpg",
+      "https://i.ibb.co.com/4R85smMN/cow2c.jpg",
+      "https://i.ibb.co.com/yBB7YP31/cow2d.jpg"
+    ],
+    "category": "Small Animal"
+  },
+  {
+    "id": 5,
+    "name": "Deshi Sheep",
+    "type": "Sheep",
+    "breed": "Local",
+    "price": 23000,
+    "weight": 42,
+    "age": 2,
+    "location": "Sirajganj",
+    "description": "This Deshi sheep is a healthy and well-maintained animal suitable for meat production and Qurbani. It has been raised in open মাঠ grazing conditions, allowing natural growth and strength development. The sheep has a balanced body structure and good পশম quality. It is regularly vaccinated and free from diseases. Its meat is tender and flavorful, making it highly preferred by consumers. The animal is calm and easy to handle, suitable for both experienced farmers and new buyers. It offers a good return on investment due to its growth rate and বাজার demand.",
+  "image": [
+      "https://i.ibb.co.com/Y7n9RBxj/cow2a.jpg",
+      "https://i.ibb.co.com/9Mkhzcv/cow2b.jpg",
+      "https://i.ibb.co.com/4R85smMN/cow2c.jpg",
+      "https://i.ibb.co.com/yBB7YP31/cow2d.jpg"
+    ],
+    "category": "Small Animal"
+  },
+  {
+    "id": 6,
+    "name": "Merino Sheep",
+    "type": "Sheep",
+    "breed": "Merino",
+    "price": 65000,
+    "weight": 68,
+    "age": 3,
+    "location": "Dhaka",
+    "description": "This Merino sheep is an imported breed known for its high-quality wool and good meat production. It has been raised under controlled farm conditions with proper nutrition and hygiene. The sheep has thick পশম and a strong immune system, ensuring long-term productivity. Regular health checkups and vaccinations have been conducted. It is ideal for both wool harvesting and Qurbani purposes. The animal has a calm temperament, making it easy to manage. Its premium breed status makes it a valuable investment for commercial livestock farming and specialized breeding programs.",
+     "image": [
+      "https://i.ibb.co.com/7d4D9n0p/cow1a.jpg",
+      "https://i.ibb.co.com/Z6f1Q7SN/cow1d.jpg",
+      "https://i.ibb.co.com/gZ5rmQ07/cow1c.jpg",
+      "https://i.ibb.co.com/Z6f1Q7SN/cow1d.jpg"
+    ],
+    "category": "Small Animal"
+  },
+  {
+    "id": 7,
+    "name": "Deshi Buffalo",
+    "type": "Buffalo",
+    "breed": "Local",
+    "price": 150000,
+    "weight": 400,
+    "age": 4,
+    "location": "Barishal",
+    "description": "This Deshi buffalo is a strong and durable animal suitable for both meat and dairy purposes. It has been raised in নদী side grazing environments, ensuring natural growth and শক্তি. The buffalo has a robust body, ভালো muscle mass, and excellent health condition. It is regularly checked by veterinarians and has no disease history. This animal is ideal for Qurbani as well as traditional farming. Its adaptability to local conditions and low maintenance requirements make it a practical choice for farmers seeking reliability and productivity in livestock.",
+    "image": [
+      "https://i.ibb.co.com/7d4D9n0p/cow1a.jpg",
+      "https://i.ibb.co.com/Z6f1Q7SN/cow1d.jpg",
+      "https://i.ibb.co.com/gZ5rmQ07/cow1c.jpg",
+      "https://i.ibb.co.com/Z6f1Q7SN/cow1d.jpg"
+    ],
+    "category": "Large Animal"
+  },
+  {
+    "id": 8,
+    "name": "Murrah Buffalo",
+    "type": "Buffalo",
+    "breed": "Murrah",
+    "price": 220000,
+    "weight": 500,
+    "age": 5,
+    "location": "Khulna",
+    "description": "The Murrah buffalo is a premium breed known for its high milk yield and strong body structure. This buffalo has been raised in a clean and well-managed farm environment with proper feeding and care. It has a glossy black coat, powerful build, and excellent স্বাস্থ্য condition. Regular vaccinations and nutritional monitoring ensure consistent productivity. It is suitable for dairy farming as well as Qurbani. Its calm behavior and adaptability make it easy to handle. This buffalo is a high-value asset for farmers looking to invest in quality livestock.",
+    "image": [
+      "https://i.ibb.co.com/Y7n9RBxj/cow2a.jpg",
+      "https://i.ibb.co.com/9Mkhzcv/cow2b.jpg",
+      "https://i.ibb.co.com/4R85smMN/cow2c.jpg",
+      "https://i.ibb.co.com/yBB7YP31/cow2d.jpg"
+    ],
+    "category": "Large Animal"
+  }
+]
+
+}
+
