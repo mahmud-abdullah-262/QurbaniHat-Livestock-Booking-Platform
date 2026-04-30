@@ -1,7 +1,8 @@
 'use client'
 import Link from 'next/link';
 import React from 'react';
-import logo from '@/assets/qurbani.png'
+import logo from '@/assets/qurbani.png';
+import avatar from '@/assets/user.png'
 import Image from 'next/image';
 import { Button, Dropdown, Label, Spinner } from '@heroui/react';
 import NavLink from './Navlink';
@@ -12,9 +13,11 @@ const Navbar =  () =>  {
   // const { data: session, isPending } =  authClient.useSession();
   // const user = session?.user;
   // console.log(user, 'user')
+
+  const isLoggedIn = true;
   return (
     <>
-     <div className='flex justify-between items-center w-11/12 mx-auto mt-16 rounded-full p-4 glass sticky top-10 z-50'>
+     <div className='flex justify-between items-center w-10/12 mx-auto mt-16 rounded-full p-4 glass sticky top-10 z-50'>
    <div className='flex gap-2 items-center'>
      
 
@@ -27,7 +30,7 @@ const Navbar =  () =>  {
     className='w-10 h-10'
     >
     </Image>
-    <h1 className='font-black text-sm md:text-2xl text-[#c3923c]'>QurbaniHat</h1>
+    <h1 className='font-black text-sm md:text-2xl text-white'>QurbaniHat</h1>
    </div>
    <div>
      <ul className=' gap-4 hidden md:flex'>
@@ -38,6 +41,34 @@ const Navbar =  () =>  {
    </div>
   
  <div className='flex gap-0.5'>
+  {isLoggedIn ? 
+  <div className='flex gap-2 items-center'>
+   <Button
+    className='
+      bg-[#c3923c] font-bold 
+      text-[10px] px-2 py-1 
+      sm:text-sm sm:px-3 sm:py-1.5 
+      
+    '
+  >
+    <Link href={'/login'}>Logout</Link>
+  </Button>
+
+  <Image
+  src={avatar}
+  width={100}
+  height={100}
+  alt='user'
+  className='w-10 h-10 rounded-full'
+  >
+
+  </Image>
+  </div>
+ 
+  :
+  <>
+  
+
   <Button
     className='
       bg-[#c3923c] font-bold 
@@ -46,10 +77,10 @@ const Navbar =  () =>  {
       rounded-r-sm
     '
   >
-    Login
+    <Link href={'/Signup'}>Signup</Link>
+   
   </Button>
-
-  <Button
+   <Button
     className='
       bg-[#c3923c] font-bold 
       text-[10px] px-2 py-1 
@@ -57,8 +88,12 @@ const Navbar =  () =>  {
       rounded-l-sm
     '
   >
-    Signup
+    <Link href={'/login'}>Login</Link>
+   
   </Button>
+  </>
+  }
+  
 </div>
 {/* {isPending ? 
   (<div className="flex items-center gap-4">
