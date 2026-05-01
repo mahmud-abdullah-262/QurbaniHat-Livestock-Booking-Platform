@@ -9,6 +9,7 @@ import { useRouter } from "next/navigation";
 import { useState } from "react";
 
 import React from 'react';
+import { toast } from "react-toastify";
 
 const LoginPage = () => {
 const router = useRouter();
@@ -23,7 +24,7 @@ const router = useRouter();
       console.log(data, 'user put a data')
     });
 
-    alert(`Form submitted with: ${JSON.stringify(data, null, 2)}`);
+    toast.success(`Login Successful`);
     const { email, password} = data;
     const { data:res, error } = await authClient.signIn.email({
     
@@ -43,6 +44,12 @@ const router = useRouter();
 console.log(res, error)
   };
     const [showPassword, setShowPassword] = useState(false);
+
+     const signInWithGoogle = async () => {
+  const data = await authClient.signIn.social({
+    provider: "google",
+  });
+};
   return (
     <Form className="flex w-72 md:w-96 flex-col gap-4 mx-auto glass p-8 rounded-2xl mt-10 mb-24" onSubmit={onSubmit}>
       <TextField
@@ -115,7 +122,7 @@ console.log(res, error)
         
       </div>
       <div>
-     <Link className="text-xs text-[#c3923c] font-bold" href={'/signup'}>Sign Up for free</Link> or <Link className="text-xs text-[#c3923c] font-bold" href={'/signup'}><Icon icon="devicon:google" /> Login with Google</Link>
+     <Link className="text-xs text-[#c3923c] font-bold" href={'/signup'}>Sign Up for free</Link> or <Link onClick={() => signInWithGoogle()} className="text-xs text-[#c3923c] font-bold" href={'#'}><Icon icon="devicon:google" /> Login with Google</Link>
         </div>
     </Form>
   );

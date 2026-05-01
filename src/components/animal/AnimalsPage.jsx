@@ -60,7 +60,7 @@ const AnimalsPage = ({animals, LowToHigh, highToLow})  => {
       {animal.name}
       <div className="badge badge-secondary">{animal.breed}</div>
     </h2>
-    <p>{animal.description}</p>
+    <p className='line-clamp-6'>{animal.description}</p>
     <div className="card-actions flex flex-col gap-2">
       <div className="badge badge-outline badge-wide">Price: {animal.price} bdt</div>
       <div className="badge badge-outline">Weight: {animal.weight} KG</div>

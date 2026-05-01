@@ -1,4 +1,5 @@
 
+import BookingForm from '@/components/animal/BookingForm';
 import Navbar from '@/components/shered/Navbar';
 import { getAnimals } from '@/lib/data';
 import Image from 'next/image';
@@ -6,12 +7,14 @@ import Image from 'next/image';
 import React from 'react';
 
 const AnimalDetailsPage = async ({params}) => {
+  
   const {id} = await params;
   console.log(id, 'pathname');
 
   const animals = await getAnimals();
   const expectedAnimal = animals.find(animal => animal.id === id);
   console.log(expectedAnimal, 'expected Animal')
+ 
   return (
     <>
     <Navbar variant="dark"></Navbar>
@@ -52,22 +55,8 @@ const AnimalDetailsPage = async ({params}) => {
     </div>
 
     <div>
-      <fieldset className="fieldset bg-base-200 border-base-300 rounded-box border p-4">
-  <legend className="fieldset-legend">Book This Qurbani</legend>
-
-  <label className="label">Name</label>
-  <input type="text" className="input w-full" placeholder="Your Name" />
-
-  <label className="label">Email</label>
-  <input type="email" className="input w-full" placeholder="Email" />
-
-    <label className="label">Address</label>
-  <input type="text" className="input w-full" placeholder="Your Address" />
-
- 
-
-  <button className="btn btn-neutral mt-4">Book Now</button>
-</fieldset>
+      <BookingForm expectedAnimal={expectedAnimal}></BookingForm>
+    
     </div>
   </div>
 </div>

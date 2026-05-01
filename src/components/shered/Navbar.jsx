@@ -17,6 +17,12 @@ const Navbar =  ({variant = "dark"}) =>  {
   console.log(user, 'user');
 
 
+  const signInWithGoogle = async () => {
+  const data = await authClient.signIn.social({
+    provider: "google",
+  });
+};
+
   const style = {
     light: {
       logo: 'text-white'
@@ -59,7 +65,7 @@ const Navbar =  ({variant = "dark"}) =>  {
   
  <div className='flex gap-0.5'>
   {isPending ? 
-  <div>loading...</div>
+  <span className="loading loading-spinner loading-xs"></span>
   : user ? 
   <div className='flex gap-2 items-center'>
    <Button  onClick={async() => await authClient.signOut()}
@@ -117,7 +123,7 @@ const Navbar =  ({variant = "dark"}) =>  {
       rounded-l-sm
     '
   > 
-    <Link href={'/login'}> <Icon icon="devicon:google" /></Link>
+    <Link onClick={() => signInWithGoogle()} href={'#'}> <Icon icon="devicon:google" /></Link>
    
   </Button>
   </>
