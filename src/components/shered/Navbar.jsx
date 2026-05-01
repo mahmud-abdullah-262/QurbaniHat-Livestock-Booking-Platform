@@ -89,7 +89,7 @@ const Navbar =  ({variant = "dark"}) =>  {
       rounded-r-sm
     '
   >
-    <Link href={'/Signup'}>Signup</Link>
+    <Link href={'/signup'}>Signup</Link>
    
   </Button>
    <Button

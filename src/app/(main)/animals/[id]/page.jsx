@@ -22,8 +22,8 @@ const AnimalDetailsPage = async ({params}) => {
       <div key={ind} id={`slide-${ind}`} className="carousel-item relative w-full">
         <Image
           src={i}
-          width={500}
-          height={500}
+          width={300}
+          height={300}
           alt='image'
           className="w-full object-cover rounded-2xl"
         />

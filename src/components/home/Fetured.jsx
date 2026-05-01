@@ -21,14 +21,14 @@ const Featured = async () => {
 
     {topFour.map(animal => {
       return (
-         <div key={animal.id} id={animal.id} className="carousel-item w-full flex gap-4">
+         <div key={animal.id} id={animal.id} className="carousel-item w-full flex flex-col md:flex-row gap-4">
     <div className='flex-1'>
      <div className="card-body">
     <h2 className="card-title">
       {animal.name}
       <div className="badge badge-secondary">{animal.breed}</div>
     </h2>
-    <p>{animal.description}</p>
+    <p className=''>{animal.description}</p>
     <div className="card-actions flex flex-col gap-2">
       <div className="badge badge-outline badge-wide">Price: {animal.price} bdt</div>
       <div className="badge badge-outline">Weight: {animal.weight} KG</div>
@@ -36,13 +36,16 @@ const Featured = async () => {
     </div>
   </div>
     </div>
-    <Image
+    
+       <Image
     src={animal.image?.[0]}
     width={500}
     height={500}
     alt={animal.name}
-    className='w-[50%] object-center object-cover'
+    className=' object-center object-cover'
     ></Image>
+    
+   
   </div> 
 
       )

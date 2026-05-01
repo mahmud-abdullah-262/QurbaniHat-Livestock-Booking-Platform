@@ -58,7 +58,7 @@ const Footer = () => {
 
     <form>
     <h6 className="footer-title mt-4">Newsletter</h6>
-    <fieldset className="w-80">
+    <fieldset className="md:w-80">
       <label>Enter your email address</label>
       <div className="join">
         <input
