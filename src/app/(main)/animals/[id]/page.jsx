@@ -16,18 +16,27 @@ const AnimalDetailsPage = async ({params}) => {
     <>
     <Navbar variant="dark"></Navbar>
     <div key={expectedAnimal.id} className="card bg-base-100 shadow-sm flex flex-col  lg:flex-row gap-4 w-11/12 mx-auto mt-10">
-  <figure className='flex-1'>
-      <Image
-        src={expectedAnimal.image?.[0]}
-        width={300}
-        height={300}
-        alt='qurbani'
-        className='w-full h-full object-cover object-right rounded-xl'
-        >
-        </Image>
-  </figure>
+  <figure className='w-full h-full lg:w-100 lg:h-100'>
+  <div className="carousel w-full">
+    {expectedAnimal.image.map((i, ind) => (
+      <div key={ind} id={`slide-${ind}`} className="carousel-item relative w-full">
+        <Image
+          src={i}
+          width={500}
+          height={500}
+          alt='image'
+          className="w-full object-cover rounded-2xl"
+        />
+        <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+          <a href={`#slide-${ind === 0 ? expectedAnimal.image.length - 1 : ind - 1}`} className="btn btn-circle text-white glass  btn-xs md:btn-sm">❮</a>
+          <a href={`#slide-${ind === expectedAnimal.image.length - 1 ? 0 : ind + 1}`} className="btn btn-circle btn-xs md:btn-sm text-white glass">❯</a>
+        </div>
+      </div>
+    ))}
+  </div>
+</figure>
   <div className="card-body flex-1 space-y-4">
-    <h2 className="card-title">
+    <h2 className="card-title font-bold text-3xl text-[#c3923c]">
       {expectedAnimal.name}
       <div className="badge badge-secondary">{expectedAnimal.breed}</div>
     </h2>

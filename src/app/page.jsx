@@ -1,6 +1,7 @@
 import AnimalsPage from "@/components/animal/AnimalsPage";
 import Banner from "@/components/home/Banner";
 import Fetured from "@/components/home/Fetured";
+import Tips from "@/components/home/Tips";
 import Navbar from "@/components/shered/Navbar";
 import Image from "next/image";
 
@@ -17,7 +18,7 @@ export default function Home() {
 
       
       <AnimalsPage></AnimalsPage>
-      
+      <Tips></Tips>
     </>
   );
 }
