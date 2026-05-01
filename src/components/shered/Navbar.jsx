@@ -42,7 +42,7 @@ const Navbar =  ({variant = "dark"}) =>  {
     className='w-10 h-10'
     >
     </Image>
-    <h1 className={`font-black text-sm md:text-2xl ${s.logo} hidden md:block`}>QurbaniHat</h1>
+    <h1  style={{ textShadow: "1px 1px 0px rgba(255,255,255)" }} className={`font-black text-sm md:text-2xl ${s.logo} hidden md:block text-shadow-xl`}>QurbaniHat</h1>
    </div>
    <div>
      <ul className=' gap-4 hidden md:flex'>
