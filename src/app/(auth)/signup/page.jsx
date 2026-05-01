@@ -1,13 +1,19 @@
 "use client";
 
+import { authClient } from "@/lib/auth-client";
 import {Check, Eye, EyeClosed} from "@gravity-ui/icons";
 import {Button, Description, FieldError, Form, Input, Label, TextField} from "@heroui/react";
 import { Icon } from "@iconify/react/offline";
 import Link from "next/link";
-import { useState } from "react";
+import { useRouter } from "next/navigation";
 
-export default function loginPage() {
-  const onSubmit = (e) => {
+import { useState } from "react";
+  
+import React from 'react';
+
+const SignupPage = () => {
+const router = useRouter();
+  const onSubmit = async (e) => {
     e.preventDefault();
     const formData = new FormData(e.currentTarget);
     const data = {};
@@ -15,13 +21,31 @@ export default function loginPage() {
     // Convert FormData to plain object
     formData.forEach((value, key) => {
       data[key] = value.toString();
+      console.log(data, 'user put a data')
     });
 
     alert(`Form submitted with: ${JSON.stringify(data, null, 2)}`);
+    const {name, email, password, image} = data;
+    const { data:res, error } = await authClient.signUp.email({
+    name: name,
+    email: email,
+    password: password,
+    image: image,
+     fetchOptions: {
+    onSuccess: () => {
+      router.push("/login");  // সফল হলে redirect
+    },
+    onError: (ctx) => {
+      console.error(ctx.error.message);
+    },
+  },
+
+});
+console.log(res, error)
   };
     const [showPassword, setShowPassword] = useState(false);
   return (
-    <Form className="flex w-72 md:w-96 flex-col gap-4 mx-auto glass p-8 rounded-2xl mt-10 mb-24" onSubmit={onSubmit}>
+   <Form className="flex w-72 md:w-96 flex-col gap-4 mx-auto glass p-8 rounded-2xl mt-10 mb-24" onSubmit={onSubmit}>
 
       <TextField  name="name" type="text">
       <Label>Name</Label>
@@ -45,6 +69,12 @@ export default function loginPage() {
         <Input placeholder="john@example.com" />
         <FieldError />
       </TextField>
+
+<TextField  name="image" type="text">
+      <Label>Image</Label>
+      <Input placeholder="Enter your Image" />
+    </TextField>
+
 
      <TextField
   isRequired
@@ -103,4 +133,6 @@ export default function loginPage() {
         </div>
     </Form>
   );
-}
+};
+
+export default SignupPage;

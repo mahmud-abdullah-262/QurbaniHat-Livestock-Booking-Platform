@@ -1,13 +1,18 @@
 "use client";
 
+import { authClient } from "@/lib/auth-client";
 import {Check, Eye, EyeClosed} from "@gravity-ui/icons";
 import {Button, Description, FieldError, Form, Input, Label, TextField} from "@heroui/react";
 import { Icon } from "@iconify/react/offline";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 
-export default function loginPage() {
-  const onSubmit = (e) => {
+import React from 'react';
+
+const LoginPage = () => {
+const router = useRouter();
+  const onSubmit = async (e) => {
     e.preventDefault();
     const formData = new FormData(e.currentTarget);
     const data = {};
@@ -15,9 +20,27 @@ export default function loginPage() {
     // Convert FormData to plain object
     formData.forEach((value, key) => {
       data[key] = value.toString();
+      console.log(data, 'user put a data')
     });
 
     alert(`Form submitted with: ${JSON.stringify(data, null, 2)}`);
+    const { email, password} = data;
+    const { data:res, error } = await authClient.signIn.email({
+    
+    email: email,
+    password: password,
+    
+     fetchOptions: {
+    onSuccess: () => {
+      router.push("/");  
+    },
+    onError: (ctx) => {
+      console.error(ctx.error.message);
+    },
+  },
+
+});
+console.log(res, error)
   };
     const [showPassword, setShowPassword] = useState(false);
   return (
@@ -96,4 +119,6 @@ export default function loginPage() {
         </div>
     </Form>
   );
-}
+};
+
+export default LoginPage;

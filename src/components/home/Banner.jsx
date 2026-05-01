@@ -1,8 +1,13 @@
+'use client'
 import React from 'react';
 import animal from '@/assets/banner1.png'
 import { Button } from '@heroui/react';
 import Link from 'next/link';
+import { authClient } from '@/lib/auth-client';
 const Banner = () => {
+  const { data: session } =  authClient.useSession();
+    const user = session?.user;
+    console.log(user, 'banner')
   return (
 <div
   className="relative bg-cover bg-center min-h-156 w-11/12 mx-auto rounded-2xl -mt-40 md:-mt-24 flex flex-col justify-center overflow-hidden"
@@ -13,6 +18,8 @@ const Banner = () => {
 
 
   <div className="relative z-10 mt-20">
+    {user && <h1 className='font-light text-xl md:text-2xl text-white ml-4 md:ml-16 mb-4'>Welcome {user?.name}!</h1>}
+    
     <h1 className='font-bold text-2xl md:text-5xl text-white ml-4 md:ml-16'>
       Fulfill Your <br /> Sunnah With <br /> Confidence
     </h1>

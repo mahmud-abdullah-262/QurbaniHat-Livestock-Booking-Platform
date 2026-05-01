@@ -3,9 +3,14 @@ import Banner from "@/components/home/Banner";
 import Fetured from "@/components/home/Fetured";
 import Tips from "@/components/home/Tips";
 import Navbar from "@/components/shered/Navbar";
+import { getAnimals } from "@/lib/data";
 import Image from "next/image";
 
-export default function Home() {
+export default async function  Home() {
+  const animals = await getAnimals()
+     
+     const LowToHigh = [...animals].sort((a, b) => a.price - b.price);
+     const highToLow = [...animals].sort((a, b) => b.price - a.price);
   return (
     <>
     <Navbar variant="dark"></Navbar>
@@ -17,7 +22,7 @@ export default function Home() {
     
 
       
-      <AnimalsPage></AnimalsPage>
+      <AnimalsPage animals={animals} LowToHigh={LowToHigh} highToLow={highToLow} ></AnimalsPage>
       <Tips></Tips>
     </>
   );

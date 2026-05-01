@@ -29,10 +29,10 @@ const AnimalsPage = ({animals, LowToHigh, highToLow})  => {
   onClick={() => {setFilteredAnimal(animals); setSortLabel('All'); closeDropdown()}}
   >all</a></li>
   <li><a
-  onClick={() => {setFilteredAnimal(animals); setSortLabel('Low to High'); closeDropdown()}}
+  onClick={() => {setFilteredAnimal(LowToHigh); setSortLabel('Low to High'); closeDropdown()}}
   >Low to High</a></li>
   <li><a
- onClick={() => {setFilteredAnimal(animals); setSortLabel('High to Low'); closeDropdown()}}
+ onClick={() => {setFilteredAnimal(highToLow); setSortLabel('High to Low'); closeDropdown()}}
   >High to Low</a></li>
 </ul>
     </div>

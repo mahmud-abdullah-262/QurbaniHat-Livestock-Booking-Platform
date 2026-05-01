@@ -8,9 +8,14 @@ import { Button, Dropdown, Label, Spinner } from '@heroui/react';
 import NavLink from './Navlink';
 import {BarsUnaligned} from '@gravity-ui/icons';
 import {Icon} from "@iconify/react";
+import { authClient } from '@/lib/auth-client';
 
 
 const Navbar =  ({variant = "dark"}) =>  {
+  const { data: session, isPending } =  authClient.useSession();
+  const user = session?.user;
+  console.log(user, 'user');
+
 
   const style = {
     light: {
@@ -26,7 +31,7 @@ const Navbar =  ({variant = "dark"}) =>  {
   // const user = session?.user;
   // console.log(user, 'user')
 
-  const isLoggedIn = false;
+  
   return (
     <>
      <div className='flex justify-between items-center w-10/12 mx-auto mt-16 rounded-full p-2 glass sticky top-10 z-50 backdrop-blur-md'>
@@ -53,25 +58,26 @@ const Navbar =  ({variant = "dark"}) =>  {
    </div>
   
  <div className='flex gap-0.5'>
-  {isLoggedIn ? 
+  {isPending ? 
+  <div>loading...</div>
+  : user ? 
   <div className='flex gap-2 items-center'>
-   <Button
+   <Button  onClick={async() => await authClient.signOut()}
     className='
       bg-[#c3923c] font-bold 
       text-[10px] px-2 py-1 
-      sm:text-sm sm:px-3 sm:py-1.5 
+      sm:text-sm sm:px-3 sm:py-1.5'
       
-    '
   >
     <Link href={'/login'}>Logout</Link>
   </Button>
 
   <Image
-  src={avatar}
-  width={100}
-  height={100}
+  src={user?.image || avatar}
+  width={300}
+  height={300}
   alt='user'
-  className='w-10 h-10 rounded-full'
+  className='w-10 h-10 object-center object-cover rounded-full border-3 border-gray-300]'
   >
 
   </Image>

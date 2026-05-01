@@ -72,11 +72,8 @@ const Footer = () => {
   </nav>
   <aside>
     <div>
-      <h6 className="footer-title">Address</h6>
-      <p>House #27, Road #5, Sector #10 <br />
-Uttara Model Town <br />
-Dhaka 1230 <br />
-Bangladesh</p>
+      <h6 className="footer-title">About</h6>
+      <p className='w-48'><span className='font-bold text-[#c3923c]'>QurbaniHat</span> is your trusted online platform for hassle-free Qurbani animal booking in Bangladesh. Browse cattle, goats, and more — we deliver live animals straight to your doorstep before Eid.</p>
     </div>
     
   </aside>
