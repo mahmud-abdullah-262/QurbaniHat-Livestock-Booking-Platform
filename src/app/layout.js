@@ -23,7 +23,7 @@ export default function RootLayout({ children }) {
     >
         
      <body className={`${montserrat.className} min-h-full flex flex-col  glass-bg`}>
-        
+        <Navbar></Navbar>
         {children}
         <Footer></Footer>
 

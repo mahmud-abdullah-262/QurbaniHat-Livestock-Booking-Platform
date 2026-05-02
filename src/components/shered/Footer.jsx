@@ -4,7 +4,7 @@ import Image from 'next/image';
 const Footer = () => {
   return (
     <footer className="footer sm:footer-horizontal bg-neutral text-neutral-content p-10">
-      <div className='w-11/12 mx-auto flex space-y-12 flex-col md:flex-row md:justify-between md:items-center'>
+      <div className='w-11/12 mx-auto flex space-y-12 flex-col md:flex-row md:justify-between md:items-start'>
         <aside>
     <Image 
     src={logo}
@@ -20,7 +20,7 @@ const Footer = () => {
   </aside>
   <nav>
     <h6 className="footer-title">Social</h6>
-    <div className="grid grid-flow-col gap-4">
+    <div className="flex gap-4">
       <a>
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -55,20 +55,29 @@ const Footer = () => {
         </svg>
       </a>
     </div>
+    <div className='space-y-1'>
+      <h1 className="footer-title my-4"> Contact Us</h1>
+      <p>📍 Address: House 12, Road 5, Block B, Mirpur 10, Dhaka 1216, Bangladesh</p>
+      <p>📞 Phone: +880 1712-345678</p>
+      <p>📧 Email: contact@qurbanihat.com</p>
+      <p>🌐 Website: www.qurbnihat.com</p>
 
-    <form>
-    <h6 className="footer-title mt-4">Newsletter</h6>
-    <fieldset className="md:w-80">
-      <label>Enter your email address</label>
-      <div className="join">
-        <input
-          type="text"
-          placeholder="username@site.com"
-          className="input input-bordered join-item" />
-        <button className="btn bg-[#c3923c] join-item">Subscribe</button>
-      </div>
-    </fieldset>
-  </form>
+      <h1 className="footer-title my-4">Business Hours:</h1>
+      <p>Sunday – Thursday: 9:00 AM – 6:00 PM</p>
+      <p>Friday: Closed</p>
+      <p>Saturday: 10:00 AM – 4:00 PM</p>
+    </div>
+   
+
+
+
+
+
+
+
+
+
+
   </nav>
   <aside>
     <div>

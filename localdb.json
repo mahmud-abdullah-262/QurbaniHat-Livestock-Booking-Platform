@@ -143,7 +143,177 @@
     ],
     "category": "Large Animal"
   }
-]
+],
+"breeds": [
+    {
+      "id": 1,
+      "category" : "Cow",
+      "name": "Brahman",
+      "region": "India / USA (widely available in Asia)",
+      "image": "https://res.cloudinary.com/dto6szvn9/image/upload/v1777711048/Brahman_cow_mvhgh3.jpg",
+      "facts": [
+        "Highly heat tolerant and suitable for tropical climates",
+        "Strong disease resistance",
+        "Commonly used for beef production in Asia",
+        "Lean meat but improves quality when crossbred",
+        "Very popular in Bangladesh for fattening and Qurbani"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Nelore",
+      "category" : "Cow",
+      "region": "India origin, developed in Brazil",
+      "image": "https://res.cloudinary.com/dto6szvn9/image/upload/v1777711048/Nelore_cow_cocxp7.webp",
+      "facts": [
+        "Fast growth rate",
+        "Efficient feed conversion",
+        "Low maintenance cost",
+        "Lean meat production",
+        "Suitable for large-scale beef farming"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Sahiwal",
+      "category" : "Cow",
+      "region": "Pakistan / India",
+      "image": "https://res.cloudinary.com/dto6szvn9/image/upload/v1777711047/Sahiwal_cow_rxbfjx.jpg",
+      "facts": [
+        "Dual-purpose breed (milk and meat)",
+        "Adapted to hot and humid climates",
+        "Good disease resistance",
+        "Produces acceptable quality meat",
+        "Performs well in crossbreeding programs"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Droughtmaster",
+      "category" : "Cow",
+      "region": "Australia (Brahman × Shorthorn)",
+      "image": "https://res.cloudinary.com/dto6szvn9/image/upload/v1777711048/Droughtmaster_cow_h5rzwr.jpg",
+      "facts": [
+        "Developed for tropical climates",
+        "Good growth rate",
+        "Better meat tenderness than Brahman",
+        "Suitable for crossbreeding",
+        "Performs well in harsh environments"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Boer Goat",
+      "category" : "Goat",
+      "region": "South Africa (available in Asia)",
+      "image": "https://res.cloudinary.com/dto6szvn9/image/upload/v1777711047/Boer_Goat_vwtfg2.jpg",
+      "facts": [
+        "One of the best meat goat breeds in the world",
+        "Very fast growth rate",
+        "High body weight (90–120 kg)",
+        "Produces tender meat with high yield",
+        "Boer crossbreeds are popular in Bangladesh"
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Jamunapari",
+      "category" : "Goat",
+      "region": "India",
+      "image": "https://res.cloudinary.com/dto6szvn9/image/upload/v1777711047/Jamunapari_goat_t5di91.jpg",
+      "facts": [
+        "Large body size",
+        "Dual-purpose (milk and meat)",
+        "Fast growth rate",
+        "Long ears and tall body structure",
+        "Adult weight ranges from 60 to 90 kg"
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Black Bengal Goat",
+      "category" : "Goat",
+      "region": "Bangladesh / Eastern India",
+      "image": "https://res.cloudinary.com/dto6szvn9/image/upload/v1777712856/black_bengla_goat_kzfxaz.jpg",
+      "facts": [
+        "Highly adapted to local conditions",
+        "Strong disease resistance",
+        "Low maintenance cost",
+        "Small size (20–30 kg)",
+        "Meat is very tasty and highly demanded"
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Beetal Goat",
+      "category" : "Goat",
+      "region": "Pakistan",
+      "image": "https://res.cloudinary.com/dto6szvn9/image/upload/v1777711047/Beetal_goat_mmo5pm.jpg",
+      "facts": [
+        "Large body size",
+        "Good for both milk and meat",
+        "Fast growth rate",
+        "Adult weight ranges from 50 to 70 kg",
+        "Commonly used in crossbreeding"
+      ]
+    },
+    {
+      "id": 9,
+      "name": "Dorper Sheep",
+      "category" : "Sheep",
+      "region": "South Africa (available in Asia)",
+      "image": "https://res.cloudinary.com/dto6szvn9/image/upload/v1777711046/Dorper_Sheep_h0zvwg.jpg",
+      "facts": [
+        "Excellent for meat production",
+        "Fast growth rate",
+        "Low maintenance",
+        "Adult weight ranges from 70 to 100+ kg",
+        "Tender meat with good fat balance"
+      ]
+    },
+    {
+      "id": 10,
+      "name": "Garole Sheep",
+      "category" : "Sheep",
+      "region": "West Bengal, India",
+      "image": "https://res.cloudinary.com/dto6szvn9/image/upload/v1777711046/Garole_Sheep_fbwkre.jpg",
+      "facts": [
+        "Highly adapted to local climates",
+        "Strong disease resistance",
+        "Small size (20–30 kg)",
+        "Low-cost farming",
+        "Tasty meat with good demand"
+      ]
+    },
+    {
+      "id": 11,
+      "name": "Nellore Sheep",
+      "category" : "Sheep",
+      "region": "Southern India",
+      "image": "https://res.cloudinary.com/dto6szvn9/image/upload/v1777711046/Nellore_Sheep_elgdnz.jpg",
+      "facts": [
+        "Large body size",
+        "Good meat yield",
+        "Fast growth rate",
+        "Adult weight ranges from 40 to 60 kg",
+        "Suitable for commercial farming"
+      ]
+    },
+    {
+      "id": 12,
+      "name": "Deccani Sheep",
+      "category" : "Sheep",
+      "region": "Deccan Plateau, India",
+      "image": "https://res.cloudinary.com/dto6szvn9/image/upload/v1777712855/Deccani_Sheep_yfnul6.jpg",
+      "facts": [
+        "Resistant to harsh environments",
+        "Low feeding cost",
+        "Adult weight ranges from 30 to 40 kg",
+        "Moderate meat quality",
+        "Suitable for low-input farming"
+      ]
+    }
+  ]
 
 }
 

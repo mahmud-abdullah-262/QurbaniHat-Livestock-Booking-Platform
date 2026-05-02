@@ -12,7 +12,7 @@ const AnimalPage = async () => {
    const highToLow = [...animals].sort((a, b) => b.price - a.price);
   return (
     <>
-    <Navbar variant="dark"></Navbar>
+    
     <div className='mx-auto w-11/12'>
       <h1 className='text-3xl text-[#c3923c] font-bold my-10 text-center '>Get Your Favorite Qurbani</h1>
 

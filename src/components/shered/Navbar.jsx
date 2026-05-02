@@ -59,6 +59,7 @@ const Navbar =  ({variant = "dark"}) =>  {
      <ul className=' gap-4 hidden md:flex'>
     <li><NavLink href={'/'}>Home</NavLink></li>
     <li><NavLink href={'/animals'}>Animals</NavLink></li>
+    <li><NavLink href={'/topbreeds'}>Top Breed</NavLink></li>
     
    </ul>
    </div>
@@ -156,6 +157,7 @@ const Navbar =  ({variant = "dark"}) =>  {
   <ul className='flex gap-4 items-center'>
     <li><NavLink href={'/'}>Home</NavLink></li>
     <li><NavLink href={'/animals'}>Animals</NavLink></li>
+    <li><NavLink href={'/topbreeds'}>Breed</NavLink></li>
   </ul>
 </div>
     </>
