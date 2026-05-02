@@ -24,7 +24,7 @@ const router = useRouter();
       console.log(data, 'user put a data')
     });
 
-    toast.success(`Login Successful`);
+    
     const { email, password} = data;
     const { data:res, error } = await authClient.signIn.email({
     
@@ -33,9 +33,11 @@ const router = useRouter();
     
      fetchOptions: {
     onSuccess: () => {
+      toast.success(`Login Successful`);
       router.push("/");  
     },
     onError: (ctx) => {
+      toast.error(ctx.error.message);
       console.error(ctx.error.message);
     },
   },

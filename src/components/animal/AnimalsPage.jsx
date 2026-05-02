@@ -6,9 +6,10 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React, { useState } from 'react';
 
- 
+
 
 const AnimalsPage = ({animals, LowToHigh, highToLow})  => {
+  
   
   const [filteredAnimal, setFilteredAnimal] = useState(animals)
   const [sortLabel, setSortLabel] = useState('All')

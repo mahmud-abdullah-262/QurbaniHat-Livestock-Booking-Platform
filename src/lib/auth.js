@@ -4,6 +4,7 @@ import { mongodbAdapter } from "better-auth/adapters/mongodb";
 const client = new MongoClient(process.env.MONGODB_DATABASE_QURBAN);
 const db = client.db('qurban-hat');
 export const auth = betterAuth({
+   baseURL: process.env.BETTER_AUTH_URL || "http://localhost:3000", 
    emailAndPassword: { 
     enabled: true, 
   }, 
@@ -20,4 +21,11 @@ export const auth = betterAuth({
     // Optional: if you don't provide a client, database transactions won't be enabled.
     client
   }),
+
+  user: {
+    additionalFields: {
+      phone: { type: "string", required: false },
+      address: { type: "string", required: false },
+    }
+  }
 });

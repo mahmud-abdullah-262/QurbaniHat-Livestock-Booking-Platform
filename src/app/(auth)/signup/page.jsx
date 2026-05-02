@@ -25,7 +25,7 @@ const router = useRouter();
       console.log(data, 'user put a data')
     });
 
-    toast.success(`Sign In Successful`);
+    
     const {name, email, password, image} = data;
     const { data:res, error } = await authClient.signUp.email({
     name: name,
@@ -34,9 +34,11 @@ const router = useRouter();
     image: image,
      fetchOptions: {
     onSuccess: () => {
-      router.push("/login");  // সফল হলে redirect
+      toast.success(`Sign In Successful`);
+      router.push("/login");  
     },
     onError: (ctx) => {
+       toast.error(ctx.error.message);
       console.error(ctx.error.message);
     },
   },

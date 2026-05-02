@@ -53,14 +53,14 @@ const Navbar =  ({variant = "dark"}) =>  {
     className='w-10 h-10'
     >
     </Image>
-    <h1  style={{ textShadow: "1px 1px 0px rgba(255,255,255)" }} className={`font-black text-sm md:text-2xl ${s.logo} hidden md:block text-shadow-xl`}>QurbaniHat</h1>
+    <h1  style={{ textShadow: "1px 1px 0px rgba(255,255,255)" }} className={`font-black text-sm md:text-[16px] ${s.logo} hidden md:block text-shadow-xl`}>QurbaniHat</h1>
    </div>
    <div>
      <ul className=' gap-4 hidden md:flex'>
     <li><NavLink href={'/'}>Home</NavLink></li>
     <li><NavLink href={'/animals'}>Animals</NavLink></li>
-    <li><NavLink href={'/topbreeds'}>Top Breed</NavLink></li>
-    
+    <li><NavLink href={'/topbreeds'}>Breeds</NavLink></li>
+    <li><NavLink href={'/myprofile'}>Profile</NavLink></li>
    </ul>
    </div>
   
@@ -154,10 +154,11 @@ const Navbar =  ({variant = "dark"}) =>  {
     </div>
 
  <div className='flex items-center justify-center w-10/12 mx-auto mt-2 rounded-full p-3 glass sticky top-28 z-50 md:hidden backdrop-blur-md'>
-  <ul className='flex gap-4 items-center'>
+  <ul className='flex gap-1 items-center'>
     <li><NavLink href={'/'}>Home</NavLink></li>
     <li><NavLink href={'/animals'}>Animals</NavLink></li>
-    <li><NavLink href={'/topbreeds'}>Breed</NavLink></li>
+    <li><NavLink href={'/topbreeds'}>Breeds</NavLink></li>
+    <li><NavLink href={'/myprofile'}>Profile</NavLink></li>
   </ul>
 </div>
     </>
