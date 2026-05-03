@@ -3,6 +3,7 @@ import "./globals.css";
 import Navbar from "@/components/shered/Navbar";
 import Footer from "@/components/shered/Footer";
 import { ToastContainer } from "react-toastify";
+import 'animate.css';
 
 export const montserrat = Montserrat({
   variable: '--font-montserrat',

@@ -8,7 +8,7 @@ const TopBreeds = async () => {
   return (
     <div className='w-11/12 mx-auto'>
       <h1 className='text-3xl text-[#c3923c] font-bold my-10 text-center '>Top Breeds</h1>
-      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 shadow my-10'>
+      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 shadow my-10 animate__animated animate__fadeInUp animate__fast'>
         {topBreeds.map(breed => <div key={breed.id} className="card w-full mx-auto flex flex-col bg-base-100 shadow-sm relative items-start">
   <figure className='w-full h-56'>
     <Image 
