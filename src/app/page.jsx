@@ -27,7 +27,7 @@ export default async function  Home() {
       <AnimalsPage animals={animals} LowToHigh={LowToHigh} highToLow={highToLow} ></AnimalsPage>
       <TopBreeds></TopBreeds>
       <Tips></Tips>
-      <LoginSuccessToast></LoginSuccessToast>
+      
     </>
   );
 }
