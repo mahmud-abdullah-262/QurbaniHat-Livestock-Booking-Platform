@@ -3,10 +3,10 @@ import Banner from "@/components/home/Banner";
 import Fetured from "@/components/home/Fetured";
 import Tips from "@/components/home/Tips";
 import TopBreeds from "@/components/home/TopBreeds";
-import LoginSuccessToast from "@/components/shered/LoginSuccessToast";
-import Navbar from "@/components/shered/Navbar";
+
+
 import { getAnimals } from "@/lib/data";
-import Image from "next/image";
+
 
 export default async function  Home() {
   const animals = await getAnimals()
