@@ -18,7 +18,7 @@ const AnimalDetailsPage = async ({params}) => {
   return (
     <>
     
-    <div key={expectedAnimal?.id} className="card bg-base-100 shadow-sm flex flex-col  lg:flex-row gap-4 w-11/12 mx-auto mt-10">
+    <div key={expectedAnimal?.id} className="card bg-base-100 shadow-sm flex flex-col  lg:flex-row gap-4 w-11/12 mx-auto mt-10 animate__animated animate__fadeInUp animate__fast">
   <figure className='w-full h-full lg:w-100 lg:h-100'>
   <div className="carousel w-full">
     {expectedAnimal?.image.map((i, ind) => (

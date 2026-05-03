@@ -53,7 +53,8 @@ const Navbar =  ({variant = "dark"}) =>  {
     className='w-10 h-10'
     >
     </Image>
-    <h1  style={{ textShadow: "1px 1px 0px rgba(255,255,255)" }} className={`font-black text-sm md:text-[16px] ${s.logo} hidden md:block text-shadow-xl`}>QurbaniHat</h1>
+    <Link href={'/'}>
+    <h1  style={{ textShadow: "1px 1px 0px rgba(255,255,255)" }} className={`font-black text-sm md:text-[16px] ${s.logo} hidden md:block text-shadow-xl`}>QurbaniHat</h1></Link>
    </div>
    <div>
      <ul className=' gap-4 hidden md:flex'>

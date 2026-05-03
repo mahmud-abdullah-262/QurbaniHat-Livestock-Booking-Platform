@@ -16,7 +16,7 @@ const Featured = async () => {
     <>
      <h1 className='text-3xl text-[#c3923c] font-bold mt-6 mb-2 text-center '>Featured Qurbani</h1>
 
-<div className='relative w-11/12 mx-auto  overflow-hidden'>
+<div className='relative w-11/12 mx-auto  overflow-hidden animate__animated animate__fadeInUp animate__fast'>
    <div className="carousel w-full my-10 h-96">
 
     {topFour.map(animal => {
