@@ -7,7 +7,7 @@ const Tips = () => {
   return (
     <>
      <h1 className='text-3xl text-[#c3923c] font-bold my-10 text-center '>Qurbani FAQ</h1>
-    <div className='grid grid-cols-3 gap-4 w-11/12 mx-auto items-start mb-16'>
+    <div className='grid grid-cols-1 lg:grid-cols-3 gap-4 w-11/12 mx-auto items-start mb-16'>
       <details className="collapse bg-base-100 border-base-300 border">
   <summary className="collapse-title font-semibold">The Proper Method of Performing Qurbani</summary>
   <div className="collapse-content text-sm space-y-2">
@@ -63,7 +63,7 @@ const Tips = () => {
     width={500}
     height={500}
     alt='sacrifice'
-    className='w-full h-60 object-cover object-center rounded-xl'
+    className='w-full h-96 object-cover object-center rounded-xl'
     ></Image>
  <p>Qurbani meat is a blessing that reflects the spirit of sacrifice, gratitude, and generosity in Islam. Proper handling and distribution of this meat ensure that its purpose is fulfilled both spiritually and socially.</p>
 <p>After the Qurbani is performed, the meat should be handled with cleanliness and care. It is recommended to divide the meat into three equal portions: one for the person and their family, one for relatives and friends, and one for the poor and needy. This distribution helps strengthen social bonds and ensures that everyone can share in the joy of Eid.</p>

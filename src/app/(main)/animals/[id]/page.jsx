@@ -12,16 +12,16 @@ const AnimalDetailsPage = async ({params}) => {
   console.log(id, 'pathname');
 
   const animals = await getAnimals();
-  const expectedAnimal = animals.find(animal => animal.id === id);
+  const expectedAnimal = animals.find(animal => animal.id == id);
   console.log(expectedAnimal, 'expected Animal')
  
   return (
     <>
-    <Navbar variant="dark"></Navbar>
-    <div key={expectedAnimal.id} className="card bg-base-100 shadow-sm flex flex-col  lg:flex-row gap-4 w-11/12 mx-auto mt-10">
+    
+    <div key={expectedAnimal?.id} className="card bg-base-100 shadow-sm flex flex-col  lg:flex-row gap-4 w-11/12 mx-auto mt-10">
   <figure className='w-full h-full lg:w-100 lg:h-100'>
   <div className="carousel w-full">
-    {expectedAnimal.image.map((i, ind) => (
+    {expectedAnimal?.image.map((i, ind) => (
       <div key={ind} id={`slide-${ind}`} className="carousel-item relative w-full">
         <Image
           src={i}
@@ -40,17 +40,17 @@ const AnimalDetailsPage = async ({params}) => {
 </figure>
   <div className="card-body flex-1 space-y-4">
     <h2 className="card-title font-bold text-3xl text-[#c3923c]">
-      {expectedAnimal.name}
-      <div className="badge badge-secondary">{expectedAnimal.breed}</div>
+      {expectedAnimal?.name}
+      <div className="badge badge-secondary">{expectedAnimal?.breed}</div>
     </h2>
-    <p>{expectedAnimal.description}</p>
+    <p>{expectedAnimal?.description}</p>
     <div className="card-actions flex gap-2">
-      <div className="btn btn-error h-7">Price: {expectedAnimal.price} bdt</div>
-      <div className="badge badge-outline">Weight: {expectedAnimal.weight} KG</div>
-      <div className="badge badge-outline">Type: {expectedAnimal.type}</div>
-      <div className="badge badge-outline">Age: {expectedAnimal.age} Year</div>
-      <div className="badge badge-outline">Location: {expectedAnimal.location}</div>
-      <div className="badge badge-outline">Category: {expectedAnimal.category}</div>
+      <div className="btn btn-error h-7">Price: {expectedAnimal?.price} bdt</div>
+      <div className="badge badge-outline">Weight: {expectedAnimal?.weight} KG</div>
+      <div className="badge badge-outline">Type: {expectedAnimal?.type}</div>
+      <div className="badge badge-outline">Age: {expectedAnimal?.age} Year</div>
+      <div className="badge badge-outline">Location: {expectedAnimal?.location}</div>
+      <div className="badge badge-outline">Category: {expectedAnimal?.category}</div>
       
     </div>
 

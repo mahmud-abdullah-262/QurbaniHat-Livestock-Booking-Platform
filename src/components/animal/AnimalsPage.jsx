@@ -48,7 +48,7 @@ const AnimalsPage = ({animals, LowToHigh, highToLow})  => {
               <div key={animal.id} className="card bg-base-100 shadow-sm">
   <figure>
       <Image
-        src={animal.image?.[0]}
+        src={animal?.image?.[0]}
         width={300}
         height={300}
         alt='qurbani'
