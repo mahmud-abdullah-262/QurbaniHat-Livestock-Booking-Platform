@@ -1,26 +1,28 @@
 'use client'
 import { PencilToSquare } from '@gravity-ui/icons';
-import { useSession } from '@/lib/auth-client'; // একটাই import
+import { useSession } from '@/lib/auth-client';
 import Image from 'next/image';
-import React, { useState } from 'react'; // useState যোগ করা হয়েছে
+import React, { useState } from 'react'; 
+import { toast } from 'react-toastify';
 
 const MyProfilePage = () => {
-  const { data: session, refetch } = useSession(); // একবারই call, refetch যোগ
+  const { data: session, refetch } = useSession(); 
   const user = session?.user;
 
   const [name, setName] = useState(session?.user?.name || "");
-  const [image, setImage] = useState(session?.user?.image || ""); // name → image ঠিক করা
+  const [image, setImage] = useState(session?.user?.image || "");
 
   const handleSubmit = async (e) => {
     e.preventDefault;
     await fetch("/api/update-profile", {
       method: "PATCH",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ name, image }), // image ও পাঠানো হচ্ছে
+      body: JSON.stringify({ name, image }),
     });
 
     await refetch();
     document.getElementById('my_modal_5').close();
+    toast.success('Profile edited successfully!')
   };
 
   return (
