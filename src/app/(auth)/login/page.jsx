@@ -50,6 +50,7 @@ console.log(res, error)
      const signInWithGoogle = async () => {
   const data = await authClient.signIn.social({
     provider: "google",
+     callbackURL: "/?login=success",
   });
 };
   return (

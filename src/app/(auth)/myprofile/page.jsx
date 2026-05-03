@@ -75,7 +75,11 @@ const MyProfilePage = () => {
     </dialog>
      </div>
      </>
-     : <p>NO User Data</p>
+     : 
+     
+     <div className='flex justify-center items-center w-11/12 mx-auto h-75'>
+      <p className='font-bold text-4xl text-gray-200 text-center'>NO User Data</p>
+      </div>
     }
     </>
   );
