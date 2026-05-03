@@ -4,12 +4,12 @@ import { mongodbAdapter } from "better-auth/adapters/mongodb";
 const client = new MongoClient(process.env.MONGODB_DATABASE_QURBAN);
 const db = client.db('qurban-hat');
 export const auth = betterAuth({
-   baseURL: process.env.BETTER_AUTH_URL || "http://localhost:3000", 
+   baseURL: process.env.BETTER_AUTH_URL || "https://qurbani-hat-livestock-booking-platf-eight.vercel.app/", 
    emailAndPassword: { 
     enabled: true, 
   }, 
    
-  trustedOrigins: ["http://localhost:3000"],
+  trustedOrigins: ["https://qurbani-hat-livestock-booking-platf-eight.vercel.app/"],
   socialProviders: { 
      google: { 
             clientId: process.env.GOOGLE_CLIENT_ID , 
