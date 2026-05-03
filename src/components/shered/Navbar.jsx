@@ -131,25 +131,7 @@ const Navbar =  ({variant = "dark"}) =>  {
   }
   
 </div>
-{/* {isPending ? 
-  (<div className="flex items-center gap-4">
-      <Spinner />
-    </div>)
-: user ? (<div className='flex gap-4 items-center'>
-   <Image
-  src={user?.image || userAvatar}
-  width={300}
-  height={300}
-  alt="user avatar"
-  className="w-10 h-10 rounded-full object-cover"
-/>
-    <p>Welcome {user?.name}!</p>
-    
-    <Button onClick={async() => await authClient.signOut()}><Link href={'/login'}>logout</Link></Button>
-    
-   </div>)
 
-:<Button><Link href={'/login'}>Login</Link></Button>} */}
    
     </div>
 
