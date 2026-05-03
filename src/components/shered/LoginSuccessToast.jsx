@@ -2,7 +2,8 @@
 
 import { useEffect } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
-import { toast } from "sonner";
+import { toast } from "react-toastify";
+
 
 export default function LoginSuccessToast() {
   const router = useRouter();
