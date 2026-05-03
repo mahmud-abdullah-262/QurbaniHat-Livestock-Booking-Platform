@@ -1,3 +1,8 @@
+<img width="1080" height="1080" alt="Untitled design" src="https://github.com/user-attachments/assets/977678f0-c4b6-4d44-8d65-81bfed08752e" />
+<img width="1080" height="1080" alt="Untitled design (1)" src="https://github.com/user-attachments/assets/f5fb2630-7437-4d5d-963a-c5bdd82a17dd" />
+
+
+
 # 🐄 QurbaniHat — Online Qurbani Livestock Booking Platform
 
 > **Your Qurbani, Our Commitment.**
